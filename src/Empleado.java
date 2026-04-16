@@ -4,7 +4,7 @@ public class Empleado {
     private String direccion;
     private String cargo;
     private int numHijos;
-
+    //Getters y setters para obtener los valores o modificarlos
     public String getDni() {
         return dni;
     }
