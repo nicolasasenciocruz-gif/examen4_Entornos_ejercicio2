@@ -1,10 +1,20 @@
+/**
+ * Clase Empleado en la cual tendremos sus atributos y metodos para que se muestren en la clase principal
+ */
 public class Empleado {
+    /**
+     * Atributos de la clase Empleado
+     */
     private String dni;
     private String nombre;
     private String direccion;
     private String cargo;
     private int numHijos;
-    //Getters y setters para obtener los valores o modificarlos
+
+    /**
+     *  //Getters y setters para obtener los valores o modificarlos
+     * @return
+     */
     public String getDni() {
         return dni;
     }
@@ -45,13 +55,22 @@ public class Empleado {
         this.numHijos = numHijos;
     }
 
+    /**
+     * Metodo Empleado que devuelve parametros por defecto como lo son el cargo y numHijos
+     * @param dni
+     * @param nombre
+     */
     public Empleado (String dni, String nombre){
         this.dni=dni;
         this.nombre=nombre;
         this.cargo="EMPLEADO";
         this.numHijos=0;
     }
-
+    /**
+     * Metodo que calcula el sueldo dependiendo del tipo de cargo  y la cantidad de hijos
+     * @param base
+     * @return
+     */
     public double calcula_sueldo(double base){
         double total=base;
 
@@ -63,6 +82,9 @@ public class Empleado {
             total+=numHijos*50;
         return total;
     }
+    /**
+     * Metodo infoEmpleado que muestra la informacion del Empleado
+     */
     public void infoEmpleado() {
         System.out.println("DNI: " + dni);
         System.out.println("Nombre: " + nombre);
